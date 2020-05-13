@@ -403,67 +403,6 @@ F 3 "" H 1100 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x04_Odd_Even CN?
-U 1 1 5EB1A058
-P 4150 4800
-F 0 "CN?" H 4150 4500 50  0000 C CNN
-F 1 "ZWAVE_TRX_HEADER" H 4200 5026 50  0000 C CNN
-F 2 "" H 4150 4800 50  0001 C CNN
-F 3 "~" H 4150 4800 50  0001 C CNN
-	1    4150 4800
-	1    0    0    -1  
-$EndComp
-Text Label 5000 4700 2    50   ~ 0
-+3V3
-Wire Wire Line
-	5000 4700 4450 4700
-Text Label 5000 4800 2    50   ~ 0
-SPI1_CE
-Wire Wire Line
-	5000 4800 4450 4800
-Text Label 5000 4900 2    50   ~ 0
-SPI1_MISO
-Wire Wire Line
-	5000 4900 4450 4900
-Wire Wire Line
-	5000 5000 4450 5000
-$Comp
-L power:GND #PWR?
-U 1 1 5EB24C87
-P 5000 5000
-F 0 "#PWR?" H 5000 4750 50  0001 C CNN
-F 1 "GND" V 5005 4872 50  0000 R CNN
-F 2 "" H 5000 5000 50  0001 C CNN
-F 3 "" H 5000 5000 50  0001 C CNN
-	1    5000 5000
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3950 4700 3400 4700
-$Comp
-L power:GND #PWR?
-U 1 1 5EB277F2
-P 3400 4700
-F 0 "#PWR?" H 3400 4450 50  0001 C CNN
-F 1 "GND" V 3405 4572 50  0000 R CNN
-F 2 "" H 3400 4700 50  0001 C CNN
-F 3 "" H 3400 4700 50  0001 C CNN
-	1    3400 4700
-	0    1    1    0   
-$EndComp
-Text Label 3400 4800 0    50   ~ 0
-SPI1_MOSI
-Wire Wire Line
-	3950 4800 3400 4800
-Wire Wire Line
-	3950 4900 3400 4900
-Text Label 3400 4900 0    50   ~ 0
-SPI1_SCK
-Text Label 3400 5000 0    50   ~ 0
-+3V3
-Wire Wire Line
-	3950 5000 3400 5000
-$Comp
 L smartie-pi-hub:WM8960 U?
 U 1 1 5EB45B26
 P 8100 2200
@@ -1644,7 +1583,7 @@ F 3 "" H 14550 7050 50  0001 C CNN
 	1    14550 7050
 	1    0    0    -1  
 $EndComp
-Text Label 15250 6450 2    50   ~ 0
+Text Label 15850 6450 2    50   ~ 0
 +5V
 $Comp
 L Device:R_Small R?
@@ -1694,4 +1633,235 @@ Wire Wire Line
 Connection ~ 13800 6100
 Wire Wire Line
 	13800 6100 13800 5900
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5F2048B1
+P 10550 6700
+F 0 "J?" H 10607 7167 50  0000 C CNN
+F 1 "USB_B_Micro" H 10607 7076 50  0000 C CNN
+F 2 "" H 10700 6650 50  0001 C CNN
+F 3 "~" H 10700 6650 50  0001 C CNN
+	1    10550 6700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10850 6700
+NoConn ~ 10850 6800
+NoConn ~ 10850 6900
+Wire Wire Line
+	10550 7100 10550 7200
+$Comp
+L power:GND #PWR?
+U 1 1 5F2652B6
+P 10550 7250
+F 0 "#PWR?" H 10550 7000 50  0001 C CNN
+F 1 "GND" H 10555 7077 50  0000 C CNN
+F 2 "" H 10550 7250 50  0001 C CNN
+F 3 "" H 10550 7250 50  0001 C CNN
+	1    10550 7250
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10450 7100
+Wire Wire Line
+	10850 6500 11150 6500
+$Comp
+L Device:C_Small C?
+U 1 1 5F28C005
+P 11150 6800
+F 0 "C?" H 11150 6850 50  0000 L CNN
+F 1 "4.7uF" H 11150 6700 50  0000 L CNN
+F 2 "" H 11150 6800 50  0001 C CNN
+F 3 "~" H 11150 6800 50  0001 C CNN
+	1    11150 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11150 6700 11150 6500
+Connection ~ 11150 6500
+Wire Wire Line
+	11150 6900 11150 7200
+Wire Wire Line
+	11150 7200 10550 7200
+Connection ~ 10550 7200
+Wire Wire Line
+	10550 7200 10550 7250
+Text Label 11400 6500 2    50   ~ 0
++5VUSB
+$Comp
+L Device:D_Schottky D?
+U 1 1 5F2B468D
+P 11700 6500
+F 0 "D?" H 11700 6284 50  0000 C CNN
+F 1 "D_Schottky" H 11700 6375 50  0000 C CNN
+F 2 "" H 11700 6500 50  0001 C CNN
+F 3 "~" H 11700 6500 50  0001 C CNN
+	1    11700 6500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11850 6500 12200 6500
+Wire Wire Line
+	11150 6500 11550 6500
+Text Label 12200 6500 2    50   ~ 0
++5V
+$Comp
+L Device:D_Schottky D?
+U 1 1 5F2DED47
+P 15400 6450
+F 0 "D?" H 15400 6234 50  0000 C CNN
+F 1 "D_Schottky" H 15400 6325 50  0000 C CNN
+F 2 "" H 15400 6450 50  0001 C CNN
+F 3 "~" H 15400 6450 50  0001 C CNN
+	1    15400 6450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	15850 6450 15550 6450
+$Comp
+L Connector_Generic:Conn_02x06_Top_Bottom CN?
+U 1 1 5F2F3FE4
+P 4050 6050
+F 0 "CN?" H 4100 6467 50  0000 C CNN
+F 1 "ZWAVE_TRX_HEADER" H 4100 6376 50  0000 C CNN
+F 2 "" H 4050 6050 50  0001 C CNN
+F 3 "~" H 4050 6050 50  0001 C CNN
+	1    4050 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 6350 3450 6350
+Text Label 3450 6350 0    50   ~ 0
++3V3
+Wire Wire Line
+	3850 6150 3450 6150
+Text Label 3450 6150 0    50   ~ 0
+SPI1_SCK
+Wire Wire Line
+	3850 6050 3450 6050
+Text Label 3450 6050 0    50   ~ 0
+SPI1_MISO
+Wire Wire Line
+	3850 5950 3450 5950
+Text Label 3450 5950 0    50   ~ 0
+SPI1_MOSI
+Wire Wire Line
+	3850 5850 3450 5850
+Text Label 3450 5850 0    50   ~ 0
+ZWAVE_CS
+Wire Wire Line
+	4750 6350 4350 6350
+Text Label 4750 6350 2    50   ~ 0
++3V3
+Wire Wire Line
+	3850 6250 3800 6250
+$Comp
+L power:GND #PWR?
+U 1 1 5F4631BC
+P 3800 6250
+F 0 "#PWR?" H 3800 6000 50  0001 C CNN
+F 1 "GND" V 3805 6122 50  0000 R CNN
+F 2 "" H 3800 6250 50  0001 C CNN
+F 3 "" H 3800 6250 50  0001 C CNN
+	1    3800 6250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 6250 4450 6250
+$Comp
+L power:GND #PWR?
+U 1 1 5F47A73E
+P 4450 6250
+F 0 "#PWR?" H 4450 6000 50  0001 C CNN
+F 1 "GND" V 4455 6122 50  0000 R CNN
+F 2 "" H 4450 6250 50  0001 C CNN
+F 3 "" H 4450 6250 50  0001 C CNN
+	1    4450 6250
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 4350 6150
+Wire Wire Line
+	4750 5850 4350 5850
+Text Label 4750 5850 2    50   ~ 0
+ZWAVE_INT
+Wire Wire Line
+	4750 5950 4350 5950
+Text Label 4750 5950 2    50   ~ 0
+~ZWAVE_RST
+Wire Wire Line
+	4750 6050 4350 6050
+Text Label 4750 6050 2    50   ~ 0
+ZWAVE_WAKE
+$Comp
+L Connector_Generic:Conn_02x06_Top_Bottom CN?
+U 1 1 5F5040F9
+P 4050 5100
+F 0 "CN?" H 4100 5517 50  0000 C CNN
+F 1 "ZIGBEE_TRX_HEADER" H 4100 5426 50  0000 C CNN
+F 2 "" H 4050 5100 50  0001 C CNN
+F 3 "~" H 4050 5100 50  0001 C CNN
+	1    4050 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 5400 3450 5400
+Text Label 3450 5400 0    50   ~ 0
++3V3
+Wire Wire Line
+	3850 5200 3450 5200
+Text Label 3450 5200 0    50   ~ 0
+SPI1_SCK
+Wire Wire Line
+	3850 5100 3450 5100
+Text Label 3450 5100 0    50   ~ 0
+SPI1_MISO
+Wire Wire Line
+	3850 5000 3450 5000
+Text Label 3450 5000 0    50   ~ 0
+SPI1_MOSI
+Wire Wire Line
+	3850 4900 3450 4900
+Text Label 3450 4900 0    50   ~ 0
+ZWAVE_CS
+Wire Wire Line
+	4750 5400 4350 5400
+Text Label 4750 5400 2    50   ~ 0
++3V3
+Wire Wire Line
+	3850 5300 3800 5300
+$Comp
+L power:GND #PWR?
+U 1 1 5F50410C
+P 3800 5300
+F 0 "#PWR?" H 3800 5050 50  0001 C CNN
+F 1 "GND" V 3805 5172 50  0000 R CNN
+F 2 "" H 3800 5300 50  0001 C CNN
+F 3 "" H 3800 5300 50  0001 C CNN
+	1    3800 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 5300 4450 5300
+$Comp
+L power:GND #PWR?
+U 1 1 5F504113
+P 4450 5300
+F 0 "#PWR?" H 4450 5050 50  0001 C CNN
+F 1 "GND" V 4455 5172 50  0000 R CNN
+F 2 "" H 4450 5300 50  0001 C CNN
+F 3 "" H 4450 5300 50  0001 C CNN
+	1    4450 5300
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 4350 5200
+Wire Wire Line
+	4750 4900 4350 4900
+Text Label 4750 4900 2    50   ~ 0
+ZIGBEE_INT
+Wire Wire Line
+	4750 5000 4350 5000
+Text Label 4750 5000 2    50   ~ 0
+~ZIGBEE_RST
+Wire Wire Line
+	4750 5100 4350 5100
+Text Label 4750 5100 2    50   ~ 0
+ZIGBEE_WAKE
 $EndSCHEMATC
