@@ -123,9 +123,9 @@ Wire Wire Line
 Wire Wire Line
 	4350 2600 5400 2600
 Text Label 1300 1200 0    50   ~ 0
-GPIO2(SDA1)
+I2C_SDA
 Text Label 1300 1300 0    50   ~ 0
-GPIO3(SCL1)
+I2C_SCL
 Text Label 1300 1400 0    50   ~ 0
 GPIO4(GCLK)
 Text Label 1300 1600 0    50   ~ 0
@@ -135,11 +135,11 @@ GPIO27
 Text Label 1300 1800 0    50   ~ 0
 GPIO22
 Text Label 1300 2000 0    50   ~ 0
-GPIO10(SPI0_MOSI)
+SPI_MOSI
 Text Label 1300 2100 0    50   ~ 0
-GPIO9(SPI0_MISO)
+SPI_MISO
 Text Label 1300 2200 0    50   ~ 0
-GPIO11(SPI0_SCK)
+SPI_SCLK
 Text Label 1300 2400 0    50   ~ 0
 GPIO0(ID_SD)
 Text Label 1300 2500 0    50   ~ 0
@@ -149,11 +149,11 @@ GPIO6
 Text Label 1300 2700 0    50   ~ 0
 GPIO13(PWM1)
 Text Label 1300 2800 0    50   ~ 0
-GPIO19(PCM_FS)
+I2S_LRCLK
 Text Label 1300 2900 0    50   ~ 0
 GPIO26
 Text Label 5400 2900 2    50   ~ 0
-GPIO20(PCM_DIN)
+I2S_ADC
 Text Label 5400 2800 2    50   ~ 0
 GPIO16
 Text Label 5400 2600 2    50   ~ 0
@@ -161,9 +161,9 @@ GPIO12(PWM0)
 Text Label 5400 2400 2    50   ~ 0
 GPIO1(ID_SC)
 Text Label 5400 2300 2    50   ~ 0
-GPIO7(CE1)
+SPI_CE_SX1238
 Text Label 5400 2200 2    50   ~ 0
-GPIO8(CE0)
+SPI_CE0
 Text Label 5400 2100 2    50   ~ 0
 GPIO25
 Text Label 5400 1900 2    50   ~ 0
@@ -171,11 +171,11 @@ GPIO24
 Text Label 5400 1800 2    50   ~ 0
 GPIO23
 Text Label 5400 1600 2    50   ~ 0
-GPIO18(PCM_CLK)
+I2S_CLK
 Text Label 5400 1500 2    50   ~ 0
-GPIO15(RXD)
+UART_RXD0
 Text Label 5400 1400 2    50   ~ 0
-GPIO14(TXD)
+UART_TXD0
 Wire Wire Line
 	4450 1300 4350 1300
 Connection ~ 4450 1700
@@ -230,7 +230,7 @@ Mounting Holes
 Wire Wire Line
 	4350 3000 5400 3000
 Text Label 5400 3000 2    50   ~ 0
-GPIO21(PCM_DOUT)
+I2S_DAC
 Wire Wire Line
 	4550 1100 4550 1200
 Wire Wire Line
@@ -258,16 +258,12 @@ F 3 "~" H 1850 5100 50  0001 C CNN
 	1    1850 5100
 	1    0    0    -1  
 $EndComp
-Text Label 2700 4800 2    50   ~ 0
-SPI2_NSS_TRX
 Wire Wire Line
 	2700 4800 2150 4800
 Text Label 2700 4700 2    50   ~ 0
 +3V3
 Wire Wire Line
 	2700 4700 2150 4700
-Text Label 2700 4900 2    50   ~ 0
-SPI2_MISO
 Wire Wire Line
 	2700 4900 2150 4900
 Text Label 2700 5000 2    50   ~ 0
@@ -298,8 +294,6 @@ Wire Wire Line
 	2700 5600 2150 5600
 Wire Wire Line
 	1650 4700 1100 4700
-Text Label 1100 4800 0    50   ~ 0
-SPI2_MOSI
 Wire Wire Line
 	1650 4800 1100 4800
 Wire Wire Line
@@ -341,19 +335,6 @@ F 3 "" H 2700 5600 50  0001 C CNN
 	1    2700 5600
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5EB51208
-P 1100 4700
-F 0 "#PWR?" H 1100 4450 50  0001 C CNN
-F 1 "GND" V 1105 4572 50  0000 R CNN
-F 2 "" H 1100 4700 50  0001 C CNN
-F 3 "" H 1100 4700 50  0001 C CNN
-	1    1100 4700
-	0    1    1    0   
-$EndComp
-Text Label 1100 4900 0    50   ~ 0
-SPI2_SCK
 $Comp
 L power:GND #PWR?
 U 1 1 5EB58901
@@ -1688,16 +1669,10 @@ Text Label 3450 6350 0    50   ~ 0
 +3V3
 Wire Wire Line
 	3850 6150 3450 6150
-Text Label 3450 6150 0    50   ~ 0
-SPI1_SCK
 Wire Wire Line
 	3850 6050 3450 6050
-Text Label 3450 6050 0    50   ~ 0
-SPI1_MISO
 Wire Wire Line
 	3850 5950 3450 5950
-Text Label 3450 5950 0    50   ~ 0
-SPI1_MOSI
 Wire Wire Line
 	3850 5850 3450 5850
 Text Label 3450 5850 0    50   ~ 0
@@ -1762,16 +1737,10 @@ Text Label 3450 5400 0    50   ~ 0
 +3V3
 Wire Wire Line
 	3850 5200 3450 5200
-Text Label 3450 5200 0    50   ~ 0
-SPI1_SCK
 Wire Wire Line
 	3850 5100 3450 5100
-Text Label 3450 5100 0    50   ~ 0
-SPI1_MISO
 Wire Wire Line
 	3850 5000 3450 5000
-Text Label 3450 5000 0    50   ~ 0
-SPI1_MOSI
 Wire Wire Line
 	3850 4900 3450 4900
 Text Label 3450 4900 0    50   ~ 0
@@ -2354,4 +2323,35 @@ F 3 "" H 3350 2300 50  0001 C CNN
 	1    3350 2300
 	1    0    0    -1  
 $EndComp
+Text Label 2700 4800 2    50   ~ 0
+SPI_CE_SX1238
+$Comp
+L power:GND #PWR?
+U 1 1 5EB51208
+P 1100 4700
+F 0 "#PWR?" H 1100 4450 50  0001 C CNN
+F 1 "GND" V 1105 4572 50  0000 R CNN
+F 2 "" H 1100 4700 50  0001 C CNN
+F 3 "" H 1100 4700 50  0001 C CNN
+	1    1100 4700
+	0    1    1    0   
+$EndComp
+Text Label 1100 4800 0    50   ~ 0
+SPI_MOSI
+Text Label 1100 4900 0    50   ~ 0
+SPI_SCLK
+Text Label 2700 4900 2    50   ~ 0
+SPI_MISO
+Text Label 3450 5100 0    50   ~ 0
+SPI_MISO
+Text Label 3450 5000 0    50   ~ 0
+SPI_MOSI
+Text Label 3450 5200 0    50   ~ 0
+SPI_SCLK
+Text Label 3450 5950 0    50   ~ 0
+SPI_MOSI
+Text Label 3450 6050 0    50   ~ 0
+SPI_MISO
+Text Label 3450 6150 0    50   ~ 0
+SPI_SCLK
 $EndSCHEMATC
