@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 42)
+    (drawings 43)
     (tracks 0)
     (zones 0)
     (modules 10)
@@ -469,6 +469,7 @@
     (pad 1 np_thru_hole circle (at 0 0 180) (size 2.7 2.7) (drill 2.7) (layers *.Cu *.Mask))
   )
 
+  (gr_line (start 142.57 180.83) (end 332.56 180.83) (layer Dwgs.User) (width 0.12))
   (gr_line (start 332.49 70.07) (end 332.49 175.06) (layer Dwgs.User) (width 0.12))
   (gr_line (start 140.95 70.07) (end 333.07 70.07) (layer Dwgs.User) (width 0.12))
   (gr_line (start 142.51 75.2) (end 142.51 172.9) (layer Dwgs.User) (width 0.12))
