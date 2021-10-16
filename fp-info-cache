@@ -1,4 +1,4 @@
-19116948662202699
+19121851401939206
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -76314,12 +76314,26 @@ LEM Hall Effect Voltage transducer
 5
 5
 SmartiePiHub
+2512
+<b>RESISTOR 2512 (Metric 6432)</b>
+
+0
+2
+2
+SmartiePiHub
 INA219_SOIC_8
 
 
 0
 8
 8
+SmartiePiHub
+KEYSTONE_1123_BATTERY_HOLDER
+
+
+0
+7
+2
 SmartiePiHub
 SPH1642HT5H
 
@@ -76334,6 +76348,13 @@ TPS613222_SOT23_5
 0
 5
 5
+SmartiePiHub
+USB4125_TYPE_C
+
+
+0
+10
+7
 SmartiePiHub
 WM8960CGEFL&slash_V
 
